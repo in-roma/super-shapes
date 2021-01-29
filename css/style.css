@@ -3,3 +3,7 @@ body {
     color: white;
     font-size: 240px;
 }
+
+.tunnel circle {
+    transform-origin: center;
+}
