@@ -1,9 +1,45 @@
+/* Main */
+
 body {
     background-color: black;
     color: white;
     font-size: 240px;
 }
 
+.bg-yellow {
+    background-color: #fff636;
+}
+
+.bg-blue {
+    background-color: #77ebfd;
+}
+  
+.bg-red {
+    background-color: #fc3035;
+}
+  
+.bg-purple {
+    background-color: #cb89fc;
+}
+
+.w-200 {
+    width: 200%;
+}
+
+
+/* Specific */
+
+/* 1st Column  */
+/* Top frame */
+.conveyor {
+    width: 200%;
+}
+/* 2nd Column  */
+/* Bottom frame */
 .tunnel circle {
     transform-origin: center;
 }
+
+/* 3rd Column  */
+/* Top frame */
+
