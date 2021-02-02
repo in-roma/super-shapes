@@ -49,7 +49,7 @@ body {
 }
 /* 2nd Column  */
 /* Bottom frame */
-.tunnel circle {
+.tunnel circle, #crosses path {
     transform-origin: center;
 }
 

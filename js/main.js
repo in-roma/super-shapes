@@ -3,8 +3,8 @@ const duplicateHtml = (element, quantity) => {
 	element.innerHTML = elementsArr;
 };
 
-/* 1st Column  */
-/* Top frame */
+/* 1st Column - Top frame */
+
 const movingRightToLeft = anime({
 	targets: '.conveyor',
 	translateX: '-50%',
@@ -12,7 +12,9 @@ const movingRightToLeft = anime({
 	duration: 2000,
 	easing: 'linear',
 });
-// Middle Frame
+
+/* 1st Column - Middle Frame */
+
 const wavePath = document.querySelector('#wave path');
 const waveOffSet = anime.setDashoffset(wavePath);
 
@@ -26,13 +28,23 @@ anime({
 	direction: 'alternate',
 	easing: 'easeInOutSine',
 });
-// Bottom Frame
+
+/* 1st Column - bottom Frame */
 
 const crosses = document.querySelector('#crosses');
 duplicateHtml(crosses, 10);
 
-/* 2nd Column  */
-/* Bottom frame */
+anime({
+	targets: '#crosses path',
+	rotate: '1turn',
+	duration: 2000,
+	delay: (el, i) => i * 100,
+	loop: true,
+	direction: 'alternate',
+	easing: 'easeInOutSine',
+});
+
+/* 2nd Column - Bottom frame */
 const scaling = anime({
 	targets: '#tunnel circle',
 	scale: 1.1,
