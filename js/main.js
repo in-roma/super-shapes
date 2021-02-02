@@ -7,6 +7,20 @@ const movingRightToLeft = anime({
 	duration: 2000,
 	easing: 'linear',
 });
+// Middle Frame
+const wavePath = document.querySelector('#wave path');
+const waveOffSet = anime.setDashoffset(wavePath);
+
+wavePath.setAttribute('stroke-dashoffset', waveOffSet);
+anime({
+	targets: wavePath,
+	strokeDashoffset: [0, waveOffSet],
+	duration: 2000,
+	delay: anime.random(0, 500),
+	loop: true,
+	direction: 'alternate',
+	easing: 'easeInOutSine',
+});
 
 /* 2nd Column  */
 /* Bottom frame */
@@ -30,8 +44,8 @@ pathEl.setAttribute('stroke-dashoffset', offset);
 anime({
 	targets: pathEl,
 	strokeDashoffset: [offset, 0],
-	duration: anime.random(1000, 3000),
-	delay: anime.random(0, 2000),
+	duration: 3000,
+	delay: anime.random(0, 500),
 	loop: true,
 	direction: 'alternate',
 	easing: 'easeInOutSine',
