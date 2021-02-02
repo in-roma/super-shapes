@@ -1,3 +1,8 @@
+const duplicateHtml = (element, quantity) => {
+	const elementsArr = new Array(quantity).fill(element.innerHTML).join('');
+	element.innerHTML = elementsArr;
+};
+
 /* 1st Column  */
 /* Top frame */
 const movingRightToLeft = anime({
@@ -21,6 +26,10 @@ anime({
 	direction: 'alternate',
 	easing: 'easeInOutSine',
 });
+// Bottom Frame
+
+const crosses = document.querySelector('#crosses');
+duplicateHtml(crosses, 10);
 
 /* 2nd Column  */
 /* Bottom frame */
