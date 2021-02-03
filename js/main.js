@@ -86,6 +86,16 @@ anime({
 
 /* 3rd Column - Bottom frame */
 
+anime({
+	targets: '#flashes .flash',
+	backgroundColor: (el, i) => ['#fff636', '#cb89fc', '#fc3035', '#77ebfd'][i],
+	delay: (el, i) => anime.random(50, 100),
+	duration: 400,
+	loop: true,
+	direction: 'alternate',
+	easing: 'easeInOutSine',
+});
+
 duplicateHtml(document.querySelector('#circles'), 20);
 const circles = document.querySelectorAll('#circles .dot');
 
