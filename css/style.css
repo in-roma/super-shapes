@@ -48,6 +48,14 @@ body {
 
 }
 /* 2nd Column  */
+/* Top frame */
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+
+}
+
 /* Bottom frame */
 .tunnel circle, #crosses path {
     transform-origin: center;
