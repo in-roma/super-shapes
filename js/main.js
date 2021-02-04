@@ -3,7 +3,8 @@ const duplicateHtml = (element, quantity) => {
 	element.innerHTML = elementsArr;
 };
 
-/* 1st Column - Top frame */
+/* 1st Column */
+
 const movingRightToLeft = anime({
 	targets: '.conveyor',
 	translateX: '-50%',
@@ -12,7 +13,6 @@ const movingRightToLeft = anime({
 	easing: 'linear',
 });
 
-/* 1st Column - Middle Frame */
 const wavePath = document.querySelector('#wave path');
 const waveOffSet = anime.setDashoffset(wavePath);
 
@@ -27,9 +27,7 @@ anime({
 	easing: 'easeInOutSine',
 });
 
-/* 1st Column - bottom Frame */
-const crosses = document.querySelector('#crosses');
-duplicateHtml(crosses, 10);
+duplicateHtml(document.querySelector('#crosses'), 10);
 
 anime({
 	targets: '#crosses path',
@@ -41,11 +39,11 @@ anime({
 	easing: 'easeInOutSine',
 });
 
-/* 2nd Column - Top frame */
-duplicateHtml(document.querySelector('#dots'), 40);
-const dots = document.querySelectorAll('#dots .dot');
+/* 2nd Column  */
 
-dots.forEach((dot) => {
+duplicateHtml(document.querySelector('#dots'), 40);
+const allDots = document.querySelectorAll('#allDots .dot');
+allDots.forEach((dot) => {
 	anime({
 		targets: dot,
 		rotate: (el, i) => anime.random(90, 360),
@@ -57,7 +55,6 @@ dots.forEach((dot) => {
 	});
 });
 
-/* 2nd Column - Bottom frame */
 const scaling = anime({
 	targets: '#tunnel circle',
 	scale: 1.1,
@@ -68,7 +65,8 @@ const scaling = anime({
 	delay: (el, i) => i * 100,
 });
 
-/* 3rd Column - Top frame */
+/* 3rd Column */
+
 const pathEl = document.querySelector('#zigzag path');
 const offset = anime.setDashoffset(pathEl);
 
@@ -83,8 +81,6 @@ anime({
 	easing: 'easeInOutSine',
 	autoplay: true,
 });
-
-/* 3rd Column - Bottom frame */
 
 anime({
 	targets: '#flashes .flash',
@@ -104,6 +100,18 @@ anime({
 	scale: [0, 1.2],
 	delay: (el, i) => i * 100,
 	duration: 250,
+	loop: true,
+	direction: 'alternate',
+	easing: 'easeInOutSine',
+});
+
+anime({
+	targets: '#squares rect',
+	translateX: ['-50%', '-50%'],
+	translateY: ['-50%', '-50%'],
+	rotate: [45, 0, -45],
+	delay: (el, i) => i * 100,
+	duration: 800,
 	loop: true,
 	direction: 'alternate',
 	easing: 'easeInOutSine',

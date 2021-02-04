@@ -7,12 +7,38 @@ body {
 }
 
 .page {
-    border: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    position: relative;
 }
+
+/* Borders top & bottom */
+
+.page:after,
+.page:before {
+content: '';
+position: absolute;
+left: 0;
+width: 100%;
+height: 8px;
+background-color: #000;
+z-index: 3;
+}
+
+.page:before {
+    top: 0;
+}
+.page:after {
+    bottom: 0;
+}
+
+/* Shadows */
 
 .box {
     box-shadow: inset 0 0 0 4px #000;
 }
+
+/* Colors */
 
 .bg-yellow {
     background-color: #fff636;
@@ -34,11 +60,7 @@ body {
     width: 200%;
 }
 
-
-/* Specific */
-
 /* 1st Column  */
-/* Top frame */
 .conveyor {
     width: 200%;
 }
@@ -47,20 +69,20 @@ body {
     border-right: 4px solid black;
 
 }
+
 /* 2nd Column  */
-/* Top frame */
 .dot {
     width: 8px;
     height: 8px;
     background-color: #000;
-
 }
 
-/* Bottom frame */
-.tunnel circle, #crosses path {
+.tunnel circle, #crosses path, #squares rect {
     transform-origin: center;
 }
 
 /* 3rd Column  */
-/* Top frame */
+#squares rect {
+  transform: translate(-50%, -50%);
+}
 
