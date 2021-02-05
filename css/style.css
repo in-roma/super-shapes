@@ -12,7 +12,7 @@ body {
     position: relative;
 }
 
-/* Borders top & bottom */
+/* Fake top & bottom borders */
 
 .page:after,
 .page:before {
@@ -61,13 +61,14 @@ z-index: 3;
 }
 
 /* 1st Column  */
+
+/* Moving rectangles */
 .conveyor {
     width: 200%;
 }
 .conveyor-belt {
     border-left: 4px solid black;
     border-right: 4px solid black;
-
 }
 
 /* 2nd Column  */
@@ -76,13 +77,14 @@ z-index: 3;
     height: 8px;
     background-color: #000;
 }
-
-.tunnel circle, #crosses path, #squares rect {
-    transform-origin: center;
+.square {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
 }
 
-/* 3rd Column  */
-#squares rect {
-  transform: translate(-50%, -50%);
+.tunnel circle,
+#crosses path {
+  transform-origin: center;
 }
 

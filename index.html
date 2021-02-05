@@ -5,15 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/normalise.css" />
 		<link rel="stylesheet" href="./css/tachyons.css" />
-
 		<link rel="stylesheet" href="./css/style.css" />
-		<title>Super//Shapes</title>
+		<title>Super~Shapes</title>
 	</head>
 	<body>
 		<div
 			class="page min-vh-100 flex items-stretch flex-column flex-row-ns overflow-hidden-ns"
 		>
 			<!-- First Column -->
+
+			<!-- Moving rectangles -->
 			<div class="w-100 vh-100 flex flex-wrap">
 				<div
 					class="w-100 h-50 bg-yellow conveyor-belt overflow-hidden box"
@@ -29,7 +30,12 @@
 						<div class="w-25 h-100 bg-purple box"></div>
 					</div>
 				</div>
-				<div class="w-100 h-25 bg-blue box" id="wave">
+
+				<!-- Wave -->
+				<div
+					class="w-100 h-25 bg-blue box flex items-center justify-center"
+					id="wave"
+				>
 					<svg width="100%" height="100%" viewBox="0 0 988 97">
 						<g
 							id="Page-1"
@@ -44,6 +50,8 @@
 						</g>
 					</svg>
 				</div>
+
+				<!-- Crosses -->
 				<div
 					class="w-100 h-25 bg-red box flex flex-wrap pa3"
 					id="crosses"
@@ -68,10 +76,15 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- Second Column -->
-			<div class="w-100 vh-100 flex flex-wrap bg-green box">
-				<div class="w-100 h-25 bg-blue box flex justify-center">
-					<div class="w-80">
+
+			<!-- Title "SUPER SHAPES" -->
+			<div class="w-100 vh-100 flex flex-wrap">
+				<div
+					class="w-100 h-25 bg-blue box flex justify-center items-center"
+				>
+					<div class="w-80 h-100 flex justify-center items-center">
 						<svg width="100%" height="100%" viewBox="0 0 640 55">
 							<g
 								id="Page-1"
@@ -89,6 +102,8 @@
 						</svg>
 					</div>
 				</div>
+
+				<!-- Squares -->
 				<div
 					class="w-100 h-25 bg-red box flex flex-wrap justify-around items-center pa3"
 					id="dots"
@@ -97,6 +112,8 @@
 						<div class="dot center"></div>
 					</div>
 				</div>
+
+				<!-- Circles -->
 				<div class="w-100 h-50 bg-yellow tunnel box" id="tunnel">
 					<svg
 						width="100%"
@@ -121,7 +138,10 @@
 					</svg>
 				</div>
 			</div>
+
 			<!-- Third Column -->
+
+			<!-- ZigZag -->
 			<div class="w-100 vh-100 flex flex-wrap bg-pink box">
 				<div class="w-100 h-50 bg-yellow pa3 box" id="zigzag">
 					<svg width="100%" height="100%" viewBox="0 0 498 495">
@@ -140,12 +160,16 @@
 						</g>
 					</svg>
 				</div>
+
+				<!-- Flashes -->
 				<div class="w-100 h-25 bg-red flex flex-wrap box" id="flashes">
 					<div class="w-50 h-50 bg-blue box flash"></div>
 					<div class="w-50 h-50 bg-red box flash"></div>
 					<div class="w-50 h-50 bg-purple box flash"></div>
 					<div class="w-50 h-50 bg-yellow box flash"></div>
 				</div>
+
+				<!-- Dots -->
 				<div
 					class="w-50 h-25 bg-blue box flex flex-wrap justify-around items-center pa3"
 					id="circles"
@@ -154,17 +178,15 @@
 						<div class="dot center br-100"></div>
 					</div>
 				</div>
-				<div class="w-50 h-25 bg-purple box squares" id="squares">
-					<svg width="100%" height="100%" viewBox="0 0 200 200">
-						<g stroke="#000" stroke-width="10px" fill="none">
-							<rect height="25%" width="25%" x="50%" y="50%" />
-							<rect height="50%" width="50%" x="50%" y="50%" />
-							<rect height="75%" width="75%" x="50%" y="50%" />
-							<rect height="100%" width="100%" x="50%" y="50%" />
-							<rect height="125%" width="125%" x="50%" y="50%" />
-							<rect height="150%" width="150%" x="50%" y="50%" />
-						</g>
-					</svg>
+
+				<!-- Squares -->
+				<div
+					class="w-50 h-25 bg-purple box squares flex flex-wrap-reverse justify-center items-center pa3"
+					id="squares"
+				>
+					<div class="w-20">
+						<div class="square center"></div>
+					</div>
 				</div>
 			</div>
 		</div>
